@@ -1,23 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
-
-func main() {
-
-	cache := New()
-
-	cache.Set("userId", 42)
-	userId := cache.Get("userId")
-
-	fmt.Println(userId)
-
-	cache.Delete("userId")
-	userId = cache.Get("userId")
-
-	fmt.Println(userId)
-}
+package InMemoryCache
 
 type Data struct {
 	Value interface{}
